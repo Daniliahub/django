@@ -12,6 +12,7 @@ Welcome to Coffee Shop Documentation's documentation!
   live
   installation
   tutorial
+  infrastructure
   API Reference<wego>
 
 
