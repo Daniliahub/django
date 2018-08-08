@@ -22,24 +22,14 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <small class="text">Starts from ${{item.base_price}}</small>
                         <div class="btn-group">
-                            {% comment %}
-                            <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#orderModal" data-item-id="{{item.id}}" data-item-title="{{item.title}}" data-condiments="{{item.get_allowed_condiments}}" data-item-sizes="{{item.get_sized_item_prices}}" data-item-variants="{{item.get_allowed_variants}}">Add to cart</button>
-                            {% endcomment %}
-
-                            <button data-ajax="{% url 'add_to_cart' item.id %}" class='btn btn-secondary' data-toggle="modal" data-target="#orderModal" data-item-title="{{item.title}}">Place order</button>
+                            <button data-ajax="{% url 'add_to_cart' item.id %}" class='btn btn-success' data-toggle="modal" data-target="#orderModal" data-item-title="{{item.title}}">Place order</button>
                         </div>
-                                
                     </div>
                     </div>
                 </div>
-            </div>    
+            </div>
             {% endfor %}
         </div>
-    {% endfor %}    
+    {% endfor %}
 </div>
 {% endblock %}
-
-<script type='text/javascript'>
-$(document).ready(function() {
-});
-</script>
