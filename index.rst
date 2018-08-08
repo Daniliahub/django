@@ -9,6 +9,7 @@ Welcome to Coffee Shop Documentation's documentation!
 .. toctree::
   :maxdepth: 2
 
+  live
   installation
   tutorial
   API Reference<wego>
