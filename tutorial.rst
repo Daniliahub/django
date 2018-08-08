@@ -21,6 +21,7 @@ One can filter orders by any combination, for example:
 - All tea orders which are of Venti size
 - All coffee Orders of any Size
 - All tea orders of any size
+
 etc.
 
 This shows total sales after applying the filter, So you can see how many tall coffee you sold.
