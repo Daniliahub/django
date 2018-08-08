@@ -1,0 +1,61 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+
+<div>
+    <h4 class="float-left">Past Orders</h4>
+    <div class="dropdown d-inline-block float-right">
+      <span class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <strong>Filter</strong>
+      </span>
+      <div class="dropdown-menu dropdown-menu-right px-3 py-4">
+        <form action="/orders/" method="post">
+          {% csrf_token %}
+          {% for field in form.visible_fields %}
+          {% if 'type_' in field.name %}
+          <div> Type {{ field.label_tag }} {{ field }} </div>
+          {% endif %}
+          {% if 'size_' in field.name %}
+          <div>Size {{ field.label_tag }} {{ field }} </div>
+          {% endif %}
+          {% endfor %}
+          <input type="submit" value="Apply" />
+        </form>
+      </div>
+    </div>
+    <br />
+    {% if all_orders %}
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Item</th>
+          <th scope="col">Size</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for order in all_orders %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <th scope="row">{{ order.item }}</th>
+        <th scope="row">{{ order.size.title}}</th>
+        <th scope="row">{{ order.quantity }}</th>
+        <th scope="row">${{ order.total_price }}</th>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <div class="clearfix"></div>
+    <div>No orders found.</div>
+    {% endif %}
+    <div class="py-4"></div>
+    <h4 class="fixed-bottom bg-white px-3 text-right">Total Sales: ${{ total_sales }}</h4>
+</div>
+
+{% endblock %}

@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Wego Coffee Shop &mdash; Coffee Shop  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Tutorial" href="tutorial.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Coffee Shop
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#django-apps">Django apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-core.models">Core Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-core.managers">Core Managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-menu.models">Menu Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-menu.views">Menu Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-order.models">Order Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-order.views">Order Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-order.forms">Order Forms</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Coffee Shop</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Wego Coffee Shop</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/wego.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wego-coffee-shop">
+<h1>Wego Coffee Shop<a class="headerlink" href="#wego-coffee-shop" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="django-apps">
+<h2>Django apps<a class="headerlink" href="#django-apps" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-core.models">
+<span id="core-models"></span><h2>Core Models<a class="headerlink" href="#module-core.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="core.models.Base">
+<em class="property">class </em><code class="descclassname">core.models.</code><code class="descname">Base</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Base"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.models.Base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base model for all the models. All models should inherit from this model
+This models features created_at, updated_at, deleted objects</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="core.models.Slugged">
+<em class="property">class </em><code class="descclassname">core.models.</code><code class="descname">Slugged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Slugged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.models.Slugged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract core model for titled models. Any model which has title should inherit this model</p>
+<dl class="method">
+<dt id="core.models.Slugged.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/models.html#Slugged.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.models.Slugged.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>on save populate slug from title else use uuid</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-core.managers">
+<span id="core-managers"></span><h2>Core Managers<a class="headerlink" href="#module-core.managers" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="core.managers.BaseManager">
+<em class="property">class </em><code class="descclassname">core.managers.</code><code class="descname">BaseManager</code><a class="reference internal" href="_modules/core/managers.html#BaseManager"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.managers.BaseManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Core Manager to manage queries</p>
+<dl class="method">
+<dt id="core.managers.BaseManager.default_filter">
+<code class="descname">default_filter</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/managers.html#BaseManager.default_filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.managers.BaseManager.default_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sometimes you want to see all (trashed, hidden, not trashed, not hidden) objects</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="core.managers.BaseManager.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/managers.html#BaseManager.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.managers.BaseManager.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do not delete anything from database, just set trashed True</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="core.managers.BaseManager.get_queryset">
+<code class="descname">get_queryset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/core/managers.html#BaseManager.get_queryset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#core.managers.BaseManager.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override get_queryset to not show deleted objects, so normal filter queries won’t show hidden
+or trashed objects</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-menu.models">
+<span id="menu-models"></span><h2>Menu Models<a class="headerlink" href="#module-menu.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="menu.models.Condiment">
+<em class="property">class </em><code class="descclassname">menu.models.</code><code class="descname">Condiment</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Condiment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Condiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Condiments model i.e any condiments which can be optionally added to order types (coffee, tea etc.)
+Multiple or none condiments can be added to an order</p>
+<dl class="exception">
+<dt id="menu.models.Condiment.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#menu.models.Condiment.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="menu.models.Condiment.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#menu.models.Condiment.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="menu.models.Item">
+<em class="property">class </em><code class="descclassname">menu.models.</code><code class="descname">Item</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Item model</p>
+<dl class="exception">
+<dt id="menu.models.Item.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#menu.models.Item.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="menu.models.Item.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#menu.models.Item.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="menu.models.Item.base_price">
+<code class="descname">base_price</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Item.base_price"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Item.base_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>base price of an item, minimum price available for an item (small sized coffee)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="menu.models.Item.get_allowed_condiments">
+<code class="descname">get_allowed_condiments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Item.get_allowed_condiments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Item.get_allowed_condiments" title="Permalink to this definition">¶</a></dt>
+<dd><p>One type of item (coffee or tea) can have multiple condiments, but all condiments
+are not allowed for all items</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="menu.models.Item.get_allowed_variants">
+<code class="descname">get_allowed_variants</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Item.get_allowed_variants"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Item.get_allowed_variants" title="Permalink to this definition">¶</a></dt>
+<dd><p>One type of item (coffee or tea) can have a variant (hot or cold)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="menu.models.Item.get_sized_item_prices">
+<code class="descname">get_sized_item_prices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Item.get_sized_item_prices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Item.get_sized_item_prices" title="Permalink to this definition">¶</a></dt>
+<dd><p>An item will have multiple size and multiple size will have multiple price, this is
+to show</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="menu.models.ItemGroup">
+<em class="property">class </em><code class="descclassname">menu.models.</code><code class="descname">ItemGroup</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#ItemGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.ItemGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Order type model i.e tea and coffee</p>
+<dl class="exception">
+<dt id="menu.models.ItemGroup.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#menu.models.ItemGroup.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="menu.models.ItemGroup.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#menu.models.ItemGroup.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="menu.models.Size">
+<em class="property">class </em><code class="descclassname">menu.models.</code><code class="descname">Size</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Size of items</p>
+<dl class="exception">
+<dt id="menu.models.Size.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#menu.models.Size.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="menu.models.Size.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#menu.models.Size.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="menu.models.SizedItemPrice">
+<em class="property">class </em><code class="descclassname">menu.models.</code><code class="descname">SizedItemPrice</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#SizedItemPrice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.SizedItemPrice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Price model for each size</p>
+<dl class="exception">
+<dt id="menu.models.SizedItemPrice.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#menu.models.SizedItemPrice.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="menu.models.SizedItemPrice.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#menu.models.SizedItemPrice.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="menu.models.Variant">
+<em class="property">class </em><code class="descclassname">menu.models.</code><code class="descname">Variant</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/models.html#Variant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.models.Variant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variant model i.e any variant which can be optionally added to an order
+only one or none variant can be addedd to an order</p>
+<dl class="exception">
+<dt id="menu.models.Variant.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#menu.models.Variant.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="menu.models.Variant.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#menu.models.Variant.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-menu.views">
+<span id="menu-views"></span><h2>Menu Views<a class="headerlink" href="#module-menu.views" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="menu.views.MenuView">
+<em class="property">class </em><code class="descclassname">menu.views.</code><code class="descname">MenuView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/menu/views.html#MenuView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#menu.views.MenuView" title="Permalink to this definition">¶</a></dt>
+<dd><p>View to show menu</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-order.models">
+<span id="order-models"></span><h2>Order Models<a class="headerlink" href="#module-order.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="order.models.Order">
+<em class="property">class </em><code class="descclassname">order.models.</code><code class="descname">Order</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/models.html#Order"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.models.Order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model for orders. One order can have multiple items, to identify that which different items
+point to same order this model is important. This model also keeps track of order status and
+total order price</p>
+<dl class="exception">
+<dt id="order.models.Order.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#order.models.Order.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="order.models.Order.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#order.models.Order.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="order.models.OrderItem">
+<em class="property">class </em><code class="descclassname">order.models.</code><code class="descname">OrderItem</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/models.html#OrderItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.models.OrderItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>OrderItem model is for each item placed in a single order. This will have details of which
+variant and which condiments has been added to the item.</p>
+<dl class="exception">
+<dt id="order.models.OrderItem.DoesNotExist">
+<em class="property">exception </em><code class="descname">DoesNotExist</code><a class="headerlink" href="#order.models.OrderItem.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="order.models.OrderItem.MultipleObjectsReturned">
+<em class="property">exception </em><code class="descname">MultipleObjectsReturned</code><a class="headerlink" href="#order.models.OrderItem.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-order.views">
+<span id="order-views"></span><h2>Order Views<a class="headerlink" href="#module-order.views" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="order.views.AllOrdersView">
+<em class="property">class </em><code class="descclassname">order.views.</code><code class="descname">AllOrdersView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/views.html#AllOrdersView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.views.AllOrdersView" title="Permalink to this definition">¶</a></dt>
+<dd><p>View to show all the past orders.
+This view also features a filter i.e. if you want to see all the coffee orders which are of tall and venti size.</p>
+<dl class="method">
+<dt id="order.views.AllOrdersView.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/views.html#AllOrdersView.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.views.AllOrdersView.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will show all orders placed till date and total sales and also renders a form to filter by type and/or size.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="order.views.AllOrdersView.post">
+<code class="descname">post</code><span class="sig-paren">(</span><em>request</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/views.html#AllOrdersView.post"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.views.AllOrdersView.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filteration view. If user wants to filter all tall coffee orders or all tall and venti tea orders this View
+makes that happen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="order.views.GroupedOrder">
+<em class="property">class </em><code class="descclassname">order.views.</code><code class="descname">GroupedOrder</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/views.html#GroupedOrder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.views.GroupedOrder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parent view for grouping orders by type or size, in future if we want to add different way of grouping this will help user
+achieving the same without duplicating any code, see the views <cite>GroupByType</cite> and <cite>GroupBySize</cite> views.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-order.forms">
+<span id="order-forms"></span><h2>Order Forms<a class="headerlink" href="#module-order.forms" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="order.forms.AddToCartForm">
+<em class="property">class </em><code class="descclassname">order.forms.</code><code class="descname">AddToCartForm</code><span class="sig-paren">(</span><em>item</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/forms.html#AddToCartForm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.forms.AddToCartForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form to add items to a cart via a modal.</p>
+<dl class="method">
+<dt id="order.forms.AddToCartForm.get_allowed_condiment_choices">
+<code class="descname">get_allowed_condiment_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/forms.html#AddToCartForm.get_allowed_condiment_choices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.forms.AddToCartForm.get_allowed_condiment_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get allowed condiment choices in the format:</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>[(&lt;condiment_id_1, &lt;condiment_title_1&gt;),
+(&lt;condiment_id_2, &lt;condiment_title_2&gt;)]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="order.forms.AddToCartForm.get_allowed_size_choices">
+<code class="descname">get_allowed_size_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/forms.html#AddToCartForm.get_allowed_size_choices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.forms.AddToCartForm.get_allowed_size_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get allowed condiment choices in the format:</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>[(&lt;size_id_1, &lt;size_title_1&gt;),
+(&lt;size_id_2, &lt;size_title_2&gt;)]</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="order.forms.AddToCartForm.get_allowed_variant_choices">
+<code class="descname">get_allowed_variant_choices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/order/forms.html#AddToCartForm.get_allowed_variant_choices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#order.forms.AddToCartForm.get_allowed_variant_choices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get allowed variant choices in the format:</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>[(&lt;variant_id_1, &lt;variant_title_1&gt;),
+(&lt;variant_id_2, &lt;variant_title_2&gt;)]</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Sudip Maji.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

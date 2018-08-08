@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+
+<div>
+  <h4>All Orders</h4>
+    <br />
+    {% if orders %}
+    {% for order_type, orders in orders.iteritems %}
+    <div>{{ order_type }}</div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Item</th>
+          <th scope="col">Size</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for order in orders %}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <th scope="row">{{ order.item }}</th>
+        <th scope="row">{{ order.size.title}}</th>
+        <th scope="row">{{ order.quantity }}</th>
+        <th scope="row">{{ order.total_price }} $</th>
+      </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% for key, value in grouped_sales.iteritems %}
+    {% if key == order_type %}
+    <h4> Total Sales in {{ key }}: ${{ value }}</h4>
+    <hr>
+    {% endif %}
+    {% endfor %}
+    {% endfor%}
+    {% else %}
+    No orders found.
+    {% endif %}
+    <div class="py-4"></div>
+    <h4 class="fixed-bottom bg-white px-3 text-right">Total Sales: ${{ total_sales }} ({% for key, value in grouped_sales.iteritems %} {{ key }}: ${{ value }} {% endfor %})</h4>
+</div>
+
+{% endblock %}

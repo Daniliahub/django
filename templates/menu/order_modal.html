@@ -1,0 +1,59 @@
+<div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+
+function getModalForm(ajax_url, handle_data) {
+    $.ajax({
+        url: ajax_url,
+        success: function(data) {
+            handle_data(data);
+        }
+    });
+}
+
+$(document).ready(function() {
+    $('#orderModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget)
+        var item_id = button.data('item-id')
+        var item_title = button.data('item-title')
+        var ajax_url = button.data('ajax');
+
+
+        modal = $(this)
+        getModalForm(ajax_url, function(response_data) {
+            modal.find('.modal-body').html(response_data);
+        });
+
+        modal.find('#orderModalLabel').text(item_title)
+
+        $("#add-to-cart-form").submit(function(e) {
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(), // serializes the form's elements.
+                success: function(data)
+                {
+                    alert(data); // show response from the php script.
+                }
+            });
+
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+        })
+    })
+})
+</script>
