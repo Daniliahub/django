@@ -26,7 +26,9 @@ SECRET_KEY = 'kv2e2$dicr$w7w@!4bv(p8yp4l%1^tt(mrlpg0toae1a=)i5=@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '54.254.235.88'
+]
 
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
